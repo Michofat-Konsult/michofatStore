@@ -1,5 +1,5 @@
-import { CartView } from "@/components/cart-view";
-export const metadata = { title: "Your shopping bag" };
+import { RetailCartView } from "@/components/retail-cart-view";
+export const metadata = { title: "Shopping Cart" };
 export default function Cart() {
-  return <CartView />;
+  return <RetailCartView />;
 }

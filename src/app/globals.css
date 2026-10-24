@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @theme inline {
-  --color-primary: #1769c2;
+  --color-primary: var(--primary);
   --color-border: #e2e8f0;
   --font-sans: Arial, Helvetica, sans-serif;
 }

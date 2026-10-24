@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AboutPage } from "@/components/about-page";
 import { notFound } from "next/navigation";
 const content: Record<
   string,
@@ -106,15 +107,18 @@ export async function generateMetadata({
 }: {
   params: Promise<{ page: string }>;
 }) {
-  return { title: content[(await params).page]?.title || "Not found" };
+  const {page}=await params;
+  return { title: page === "about" ? "About Us" : content[page]?.title || "Not found" };
 }
 export default async function InfoPage({
   params,
 }: {
   params: Promise<{ page: string }>;
 }) {
-  const data = content[(await params).page];
+  const { page } = await params;
+  const data = content[page];
   if (!data) notFound();
+  if (page === "about") return <AboutPage />;
   return (
     <div className="container page-space info-page">
       <div className="page-title">

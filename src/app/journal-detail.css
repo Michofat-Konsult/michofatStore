@@ -1,0 +1,355 @@
+.jd-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 31.6%;
+  gap: 32px;
+  margin: 32px 0 50px;
+}
+.jd-main,
+.jd-sidebar {
+  min-width: 0;
+}
+.jd-main > h1 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+.jd-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 17px;
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+.jd-meta > span,
+.jd-meta > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.jd-meta > span:first-child {
+  display: block;
+}
+.jd-meta a {
+  color: #b27b00;
+}
+.jd-gallery {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.jd-gallery > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.jd-gallery > button {
+  position: absolute;
+  top: 40%;
+  height: 24%;
+  width: 54px;
+  display: grid;
+  place-items: center;
+  background: #0008;
+  color: white;
+}
+.jd-gallery-prev {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.jd-gallery-next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.jd-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+.jd-thumbnails button {
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+.jd-thumbnails button[aria-pressed="true"] {
+  border-color: #ffb400;
+}
+.jd-thumbnails img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+  object-fit: cover;
+}
+.jd-body {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+.jd-body p {
+  margin-bottom: 26px;
+}
+.jd-expand {
+  text-align: center;
+  margin: -10px 0 30px;
+}
+.jd-show-more {
+  font-size: 13px;
+  line-height: 1.5;
+  background: #fa252b;
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.jd-author {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  border: 1px solid #ddd;
+  background: #f7f8f9;
+  padding: 18px;
+  margin-bottom: 22px;
+  scroll-margin-top: 90px;
+}
+.jd-author-avatar {
+  height: 110px;
+  background: #eee4c7;
+  display: grid;
+  place-items: center;
+  color: #a97a00;
+}
+.jd-author h2 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #b17d00;
+  margin-bottom: 10px;
+}
+.jd-author p {
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+.jd-comments {
+  scroll-margin-top: 90px;
+}
+.jd-comments form {
+  background: #f7f8f9;
+  border: 1px solid #ddd;
+  padding: 28px;
+}
+.jd-comments h2 {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.jd-comments textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  border: 2px solid #d0d5da;
+  border-radius: 7px;
+  background: #fff;
+  padding: 12px 20px;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+.jd-comments textarea:focus {
+  outline: 2px solid #ffb400;
+  outline-offset: 2px;
+}
+.jd-comments .account-button {
+  padding-inline: 30px;
+}
+.jd-no-comments {
+  font-size: 17px;
+  margin: 20px 0;
+}
+.jd-comment-list article {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+.jd-sidebar .journal-categories > a {
+  display: block;
+  padding: 15px 18px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+.jd-sidebar .journal-categories > a:last-child {
+  border: 0;
+}
+.jd-sidebar .journal-categories > a[aria-current] {
+  background: #ffb400;
+}
+.jd-sidebar .journal-categories > a:hover {
+  background: #fff0c7;
+}
+.jd-related-articles {
+  background: #f7f8f9;
+  padding: 45px 0;
+}
+.jd-related-articles .journal-article-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.jd-related-products {
+  padding-top: 45px;
+  padding-bottom: 65px;
+}
+.jd-products {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 25px;
+}
+.jd-products .rp-name {
+  font-size: 16px;
+}
+.jd-products .rp-countdown {
+  font-size: 12px;
+}
+@media (min-width: 1600px) {
+  .jd-layout {
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .jd-main > h1 {
+    font-size: 50px;
+  }
+  .jd-body {
+    font-size: 21px;
+  }
+  .jd-meta {
+    font-size: 20px;
+  }
+  .jd-author p {
+    font-size: 20px;
+  }
+  .jd-author {
+    grid-template-columns: 135px minmax(0, 1fr);
+  }
+  .jd-author-avatar {
+    height: 135px;
+  }
+  .jd-sidebar .journal-categories > a {
+    font-size: 21px;
+  }
+}
+@media (max-width: 1100px) {
+  .jd-main > h1 {
+    font-size: 34px;
+  }
+  .jd-layout {
+    grid-template-columns: minmax(0, 1fr) 28%;
+    gap: 25px;
+  }
+  .jd-meta {
+    font-size: 14px;
+  }
+  .jd-body {
+    font-size: 16px;
+  }
+  .jd-author {
+    grid-template-columns: 75px minmax(0, 1fr);
+  }
+  .jd-author-avatar {
+    height: 75px;
+  }
+  .jd-author p {
+    font-size: 15px;
+  }
+  .jd-sidebar .journal-categories > a {
+    font-size: 15px;
+  }
+  .jd-products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .jd-related-articles .journal-article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .jd-layout {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 25px;
+  }
+  .jd-main > h1 {
+    font-size: 32px;
+  }
+  .jd-sidebar .journal-product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .jd-sidebar .journal-categories {
+    display: block;
+  }
+  .jd-sidebar .journal-categories > a {
+    padding: 14px 18px;
+  }
+  .jd-related-products {
+    padding-bottom: 40px;
+  }
+  .jd-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 18px;
+  }
+  .jd-comments form {
+    padding: 22px;
+  }
+  .jd-gallery > button {
+    width: 38px;
+  }
+  .jd-meta {
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .jd-main > h1 {
+    font-size: 30px;
+  }
+  .jd-author {
+    grid-template-columns: 55px minmax(0, 1fr);
+    padding: 15px;
+    gap: 14px;
+  }
+  .jd-author-avatar {
+    height: 55px;
+  }
+  .jd-author-avatar svg {
+    width: 35px;
+  }
+  .jd-author h2 {
+    font-size: 20px;
+  }
+  .jd-sidebar .journal-product-list {
+    grid-template-columns: 1fr;
+  }
+  .jd-related-articles .journal-article-grid {
+    grid-template-columns: 1fr;
+  }
+  .jd-comments h2 {
+    font-size: 25px;
+  }
+  .jd-comments form {
+    padding: 18px;
+  }
+  .jd-comments textarea {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .jd-products .rp-name {
+    font-size: 13px;
+  }
+  .jd-products .rp-countdown {
+    font-size: 10px;
+  }
+  .jd-thumbnails {
+    gap: 7px;
+  }
+  .jd-meta {
+    font-size: 13px;
+  }
+}

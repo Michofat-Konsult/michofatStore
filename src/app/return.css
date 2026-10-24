@@ -1,0 +1,258 @@
+.return-intro {
+  font-size: 18px;
+  margin: 22px 0;
+}
+.return-form > fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 25px;
+  min-width: 0;
+}
+.return-form > fieldset > legend {
+  font-size: 27px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.return-field {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.return-field > label {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.return-form span {
+  color: #ed3949;
+}
+.return-field > input,
+.return-field > textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 2px solid #d0d5da;
+  border-radius: 6px;
+  height: 47px;
+  padding: 10px 14px;
+  background: #fff;
+  color: #292929;
+  font-size: 18px;
+}
+.return-field > input::placeholder,
+.return-field > textarea::placeholder {
+  color: #7b838c;
+  opacity: 1;
+}
+.return-field > input.return-date {
+  max-width: 300px;
+}
+.return-field > textarea {
+  height: 280px;
+  resize: vertical;
+}
+.return-details {
+  align-items: start;
+  margin-top: 30px;
+}
+.return-details > label {
+  padding-top: 10px;
+}
+.return-details > small {
+  grid-column: 2;
+  font-size: 12px;
+  color: #777;
+}
+.return-form .return-radio-field {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  border: 0;
+  padding: 0;
+  margin: 20px 0 30px;
+  min-width: 0;
+  position: relative;
+}
+.return-radio-field > legend {
+  float: left;
+  width: 150px;
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 8px 0 0;
+}
+.return-radio-field > div {
+  grid-column: 2;
+  min-width: 0;
+}
+.return-radio-field label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+.return-radio-field input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #ffb400;
+  flex-shrink: 0;
+}
+.return-form .return-opened {
+  margin-top: 22px;
+  margin-bottom: 30px;
+}
+.return-opened > div {
+  display: flex;
+  gap: 22px;
+  padding-top: 7px;
+}
+.return-sidebar {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.return-sidebar .account-sidebar {
+  border: 0;
+  border-radius: 0;
+}
+.return-sidebar .account-sidebar > a:last-child {
+  display: none;
+}
+.return-guest-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  padding: 14px 18px;
+  font-size: 17px;
+  min-height: 51px;
+}
+.return-guest-links a:hover {
+  background: #fff0c9;
+}
+.return-page input:focus-visible,
+.return-page textarea:focus-visible {
+  outline: 2px solid #b67e00;
+  outline-offset: 3px;
+}
+.return-page .account-status {
+  margin-bottom: 25px;
+}
+.return-page .account-status p {
+  margin-top: 5px;
+}
+@media (min-width: 1600px) {
+  .return-field,
+  .return-form .return-radio-field {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 20px;
+  }
+  .return-radio-field > legend {
+    width: 170px;
+    font-size: 20px;
+  }
+  .return-field > label,
+  .return-radio-field label {
+    font-size: 20px;
+  }
+  .return-field > input {
+    height: 55px;
+    font-size: 21px;
+  }
+  .return-field > textarea {
+    height: 340px;
+    font-size: 21px;
+  }
+  .return-form > fieldset > legend {
+    font-size: 31px;
+  }
+  .return-intro {
+    font-size: 21px;
+  }
+}
+@media (max-width: 1100px) {
+  .return-field,
+  .return-form .return-radio-field {
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 13px;
+  }
+  .return-radio-field > legend {
+    width: 125px;
+  }
+  .return-field > label,
+  .return-radio-field > legend {
+    font-size: 16px;
+  }
+  .return-radio-field label {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .return-sidebar .account-sidebar {
+    display: block;
+  }
+  .return-sidebar .account-sidebar > a {
+    border-right: 0;
+  }
+  .return-sidebar {
+    margin-top: 15px;
+  }
+  .return-form .account-form-actions {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .return-intro {
+    font-size: 16px;
+  }
+  .return-form > fieldset > legend {
+    font-size: 24px;
+  }
+  .return-field,
+  .return-form .return-radio-field {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .return-field > label {
+    display: block;
+    margin-bottom: 7px;
+  }
+  .return-field > input,
+  .return-field > textarea {
+    font-size: 16px;
+  }
+  .return-radio-field > legend {
+    float: none;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .return-radio-field > legend br {
+    display: none;
+  }
+  .return-radio-field label {
+    font-size: 16px;
+    align-items: flex-start;
+    gap: 9px;
+  }
+  .return-radio-field input {
+    margin-top: 4px;
+  }
+  .return-field > textarea {
+    height: 230px;
+  }
+  .return-opened > div {
+    padding-top: 0;
+  }
+  .return-field > input.return-date {
+    max-width: none;
+  }
+  .return-form .return-radio-field {
+    margin-top: 20px;
+  }
+  .return-details > label {
+    padding-top: 0;
+  }
+}

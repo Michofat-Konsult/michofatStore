@@ -19,5 +19,5 @@ export default async function Product({
 }) {
   const p = getProduct((await params).id);
   if (!p) notFound();
-  return <ProductDetail product={p} />;
+  return <ProductDetail key={p.id} product={p} />;
 }
